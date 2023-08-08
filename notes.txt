@@ -1,0 +1,54 @@
+NMAP
+-----
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-08-08 11:56 EDT
+Nmap scan report for searcher.htb (10.10.11.208)
+Host is up (0.037s latency).
+Not shown: 998 closed tcp ports (conn-refused)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.9p1 Ubuntu 3ubuntu0.1 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 4fe3a667a227f9118dc30ed773a02c28 (ECDSA)
+|_  256 816e78766b8aea7d1babd436b7f8ecc4 (ED25519)
+80/tcp open  http    Apache httpd 2.4.52
+| http-server-header: 
+|   Apache/2.4.52 (Ubuntu)
+|_  Werkzeug/2.1.2 Python/3.10.6
+|_http-title: Searcher
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 8.48 seconds
+-----
+
+USER
+-----
+SITE is running searchanchor 2.4.0
+vulnerable to RCE
+-----
+
+PRIV ESC
+-----
+checking the apache files reveal that there is a vhost 
+gitea.searcher.htb
+/var/www directory has a .git folder
+exposed credentials for user CODY
+same credentials as the user svc that we got shell from initially for user
+
+SUDO -L
+system-checkup.py script ran as root
+3 options 
+docker-ps
+docker-inspect
+full-checkup
+
+Using docker-inspect options
+sudo -S /usr/bin/python3 /opt/scripts/system-checkup.py docker-inspect ‘{{json .}}’ mysql_db
+we can find the credentials for the gitea user(admin)
+login to the admin user on gitea@searcher.htb
+we get the source code for the system-checkup.py script
+it runs the full-checkup.sh script but doesn't specify which directory or file
+thus we can create our own full-checkup.sh file with a rev shell and get root
+-----
+
+cody:jh1usoih2bkjaspwe92
+mysql_root:jI86kGUuj87guWr3RyF
