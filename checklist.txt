@@ -15,3 +15,8 @@ LEAKED PRIVATE ID_RSA SSH FILE
 check if credentials are the same with users on different service (user on webservice password might be same as user in shell)
 check for open ports( netstat -an ss -ltop) mysql? databases?
 docker container???
+
+login page
+---
+Default credentials for that service?
+---
