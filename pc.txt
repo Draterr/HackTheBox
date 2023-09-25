@@ -1,0 +1,129 @@
+# Nmap 7.94 scan initiated Fri Aug 18 06:43:31 2023 as: nmap -sC -sV -oA nmap/pc -Pn -p- -T5 10.10.11.214
+Nmap scan report for 10.10.11.214
+Host is up (0.036s latency).
+Not shown: 65533 filtered tcp ports (no-response)
+PORT      STATE SERVICE VERSION
+22/tcp    open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.7 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 91:bf:44:ed:ea:1e:32:24:30:1f:53:2c:ea:71:e5:ef (RSA)
+|   256 84:86:a6:e2:04:ab:df:f7:1d:45:6c:cf:39:58:09:de (ECDSA)
+|_  256 1a:a8:95:72:51:5e:8e:3c:f1:80:f5:42:fd:0a:28:1c (ED25519)
+50051/tcp open  unknown
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port50051-TCP:V=7.94%I=7%D=8/18%Time=64DF4B9E%P=x86_64-pc-linux-gnu%r(N
+SF:ULL,2E,"\0\0\x18\x04\0\0\0\0\0\0\x04\0\?\xff\xff\0\x05\0\?\xff\xff\0\x0
+SF:6\0\0\x20\0\xfe\x03\0\0\0\x01\0\0\x04\x08\0\0\0\0\0\0\?\0\0")%r(Generic
+SF:Lines,2E,"\0\0\x18\x04\0\0\0\0\0\0\x04\0\?\xff\xff\0\x05\0\?\xff\xff\0\
+SF:x06\0\0\x20\0\xfe\x03\0\0\0\x01\0\0\x04\x08\0\0\0\0\0\0\?\0\0")%r(GetRe
+SF:quest,2E,"\0\0\x18\x04\0\0\0\0\0\0\x04\0\?\xff\xff\0\x05\0\?\xff\xff\0\
+SF:x06\0\0\x20\0\xfe\x03\0\0\0\x01\0\0\x04\x08\0\0\0\0\0\0\?\0\0")%r(HTTPO
+SF:ptions,2E,"\0\0\x18\x04\0\0\0\0\0\0\x04\0\?\xff\xff\0\x05\0\?\xff\xff\0
+SF:\x06\0\0\x20\0\xfe\x03\0\0\0\x01\0\0\x04\x08\0\0\0\0\0\0\?\0\0")%r(RTSP
+SF:Request,2E,"\0\0\x18\x04\0\0\0\0\0\0\x04\0\?\xff\xff\0\x05\0\?\xff\xff\
+SF:0\x06\0\0\x20\0\xfe\x03\0\0\0\x01\0\0\x04\x08\0\0\0\0\0\0\?\0\0")%r(RPC
+SF:Check,2E,"\0\0\x18\x04\0\0\0\0\0\0\x04\0\?\xff\xff\0\x05\0\?\xff\xff\0\
+SF:x06\0\0\x20\0\xfe\x03\0\0\0\x01\0\0\x04\x08\0\0\0\0\0\0\?\0\0")%r(DNSVe
+SF:rsionBindReqTCP,2E,"\0\0\x18\x04\0\0\0\0\0\0\x04\0\?\xff\xff\0\x05\0\?\
+SF:xff\xff\0\x06\0\0\x20\0\xfe\x03\0\0\0\x01\0\0\x04\x08\0\0\0\0\0\0\?\0\0
+SF:")%r(DNSStatusRequestTCP,2E,"\0\0\x18\x04\0\0\0\0\0\0\x04\0\?\xff\xff\0
+SF:\x05\0\?\xff\xff\0\x06\0\0\x20\0\xfe\x03\0\0\0\x01\0\0\x04\x08\0\0\0\0\
+SF:0\0\?\0\0")%r(Help,2E,"\0\0\x18\x04\0\0\0\0\0\0\x04\0\?\xff\xff\0\x05\0
+SF:\?\xff\xff\0\x06\0\0\x20\0\xfe\x03\0\0\0\x01\0\0\x04\x08\0\0\0\0\0\0\?\
+SF:0\0")%r(SSLSessionReq,2E,"\0\0\x18\x04\0\0\0\0\0\0\x04\0\?\xff\xff\0\x0
+SF:5\0\?\xff\xff\0\x06\0\0\x20\0\xfe\x03\0\0\0\x01\0\0\x04\x08\0\0\0\0\0\0
+SF:\?\0\0")%r(TerminalServerCookie,2E,"\0\0\x18\x04\0\0\0\0\0\0\x04\0\?\xf
+SF:f\xff\0\x05\0\?\xff\xff\0\x06\0\0\x20\0\xfe\x03\0\0\0\x01\0\0\x04\x08\0
+SF:\0\0\0\0\0\?\0\0")%r(TLSSessionReq,2E,"\0\0\x18\x04\0\0\0\0\0\0\x04\0\?
+SF:\xff\xff\0\x05\0\?\xff\xff\0\x06\0\0\x20\0\xfe\x03\0\0\0\x01\0\0\x04\x0
+SF:8\0\0\0\0\0\0\?\0\0")%r(Kerberos,2E,"\0\0\x18\x04\0\0\0\0\0\0\x04\0\?\x
+SF:ff\xff\0\x05\0\?\xff\xff\0\x06\0\0\x20\0\xfe\x03\0\0\0\x01\0\0\x04\x08\
+SF:0\0\0\0\0\0\?\0\0")%r(SMBProgNeg,2E,"\0\0\x18\x04\0\0\0\0\0\0\x04\0\?\x
+SF:ff\xff\0\x05\0\?\xff\xff\0\x06\0\0\x20\0\xfe\x03\0\0\0\x01\0\0\x04\x08\
+SF:0\0\0\0\0\0\?\0\0")%r(X11Probe,2E,"\0\0\x18\x04\0\0\0\0\0\0\x04\0\?\xff
+SF:\xff\0\x05\0\?\xff\xff\0\x06\0\0\x20\0\xfe\x03\0\0\0\x01\0\0\x04\x08\0\
+SF:0\0\0\0\0\?\0\0");
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Aug 18 06:44:53 2023 -- 1 IP address (1 host up) scanned in 82.39 seconds
+
+USER
+-----
+after google search
+probably running grpc
+using grpcurl we found the SimpleApp "file" and it has 4 method 
+LoginUser
+RegisterUser
+getInfo
+
+In order to invoke a getInfo request we need the JWT token from LoginUser method
+getInfo has an id value
+we google for grpc blog (https://medium.com/@ibm_ptc_security/grpc-security-series-part-3-c92f3b687dd9)
+we try to run the id value through sqlmap
+and identify a sql injection on the backend SQLITE database
+Database: <current>                                                                                      
+Table: accounts                                                                                                                                                                                                   
+[2 entries]                                                                                              
++------------------------+----------+                                                                    
+| password               | username |                                                                    
++------------------------+----------+                                                                    
+| admin                  | admin    |                                                                    
+| HereIsYourPassWord1431 | sau      |                                                                    
++------------------------+----------+  
+using grpcurl/grpcui we can invoke grpc "api" requests
+We get USER sau
+
+SQL INJECTION INVESTIGATION
+-----
+The id value in the post data is vulnerable to SQL injection 
+WHERE clause sql injection
+EXAMPLE: SELECT * FROM users WHERE id = "$userinput"
+using sql syntax we will know what sql command can be ran after WHERE
+we can do a UNION sql injection attack | resources (https://portswigger.net/web-security/sql-injection/union-attacks)
+First we can confirm the sql injection by using a simple Boolean-Based Blind SQLI | resources (https://www.acunetix.com/websitesecurity/sql-injection2/)
+id = "1 50=50" Since 50=50 is True there will be no error displayed by the server
+id = "1 50=49" We will get an error message
+This confims that a sql injection exists
+
+To further confirm it we could use a Time-Based Blind SQLI
+AND [RANDNUM]=LIKE('ABCDEFG',UPPER(HEX(RANDOMBLOB([SLEEPTIME]00000000/2))))| resources (https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/SQL%20Injection/SQLite%20Injection.md)
+
+Now to extract data from the SQLI
+Since it is a union based SQLI we have to find the right amount of columns to inject our payload| resources ippsec(https://www.youtube.com/watch?v=_csbKuOlmdE)
+##Every SELECT statement within UNION must have the same number of columns##
+we can find this by 
+ 
+Provided you can detect some difference in the application's response, you can infer how many columns are being returned from the query.
+
+The second method involves submitting a series of UNION SELECT payloads specifying a different number of null values:
+' UNION SELECT NULL--
+' UNION SELECT NULL,NULL--
+' UNION SELECT NULL,NULL,NULL--
+
+once we find the right amount of columns our data will be reflected
+"id":"1 UNION SELECT 1" #This means the previous SELECT statement only had 1 column
+\\\
+responses": [
+    {
+      "message": {
+        "message": "1"(reflected)
+      },
+\\\
+
+Now that we've identified the injection point for our SQLI we can extract data
+We will now have to find the column names in the database
+We can do this by querying the information_schema which will return the necessary information | resource (https://www.sqlite.org/schematab.html)
+For some reason we need JSON_GROUP_ARRAY AND COALESCE to extract the columns???
+Once we've identified the columns we can create a query to extract the data we want 
+
+PRIV ESC
+-----
+we run linpeas don't find anything interesting
+we run netstat -an | grep tcp
+we found 127.0.0.1:8000
+curl 127.0.0.1:8000 indicates that it is an internal service running pyload
+we use ssh port forwarding ssh -L(our port):127.0.0.1:(open port on target) sau@10.10.11.214
+now we can access the pyload page on our local machine via 127.0.0.1:(port specified)
+
+we do some enumration (python3;import pyload;print(pyload.__version__)) and find that pyload is running V 0.5.0 which is vulnerable to PRE auth RCE
+we run the exploit and we get Root!
